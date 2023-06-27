@@ -110,7 +110,7 @@ public class Forgetpassword extends JFrame implements ActionListener {
         if(e.getSource() == search){
             try{
                 String query = "select * from account where username = '"+jtusername.getText()+"'";
-                Con c = new Con();
+                Conn c = new Conn();
                ResultSet rs =  c.statement.executeQuery(query);   // Resultset available in sql
                 while(rs.next()){
                     jtname.setText(rs.getString("name"));
@@ -122,7 +122,7 @@ public class Forgetpassword extends JFrame implements ActionListener {
         } else if (e.getSource() == retrieve) {
             try{
                 String query = "select * from account where answer = '"+jtanswer.getText()+"' AND username = '"+jtusername.getText()+"'";
-                Con c = new Con();
+                Conn c = new Conn();
                 ResultSet rs =  c.statement.executeQuery(query);   // Resultset available in sql
                 while(rs.next()){
                     jtpass.setText(rs.getString("password"));

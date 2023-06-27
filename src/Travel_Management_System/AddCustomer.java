@@ -131,7 +131,7 @@ public class AddCustomer extends JFrame implements ActionListener {
         image2.add(image);
 
         try {
-            Con c = new Con();
+            Conn c = new Conn();
             ResultSet rs = c.statement.executeQuery("select * from account where username = '"+username+"'");
             while(rs.next()){
                 lbusername.setText(rs.getString("username"));
@@ -167,7 +167,7 @@ public class AddCustomer extends JFrame implements ActionListener {
             String phone = jtphone.getText();
             String mail = jtmail.getText();
             try {
-                Con c = new Con();
+                Conn c = new Conn();
                 String query = "insert into customer values('"+username+"','"+id+"','"+number+"','"+name+"','"+gender+"','"+country+"','"+address+"','"+phone+"','"+mail+"')";
                 c.statement.executeUpdate(query);
 

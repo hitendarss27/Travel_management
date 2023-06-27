@@ -116,7 +116,7 @@ public class DeleteDetails extends JFrame implements ActionListener {
         bg.add(image2);
 
         try{
-            Con c = new Con();
+            Conn c = new Conn();
             String query = "select * from customer where username = '"+username+"'";
             ResultSet rs = c.statement.executeQuery(query);
             while (rs.next()){
@@ -144,7 +144,7 @@ public class DeleteDetails extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         try{
-            Con c = new Con();
+            Conn c = new Conn();
             String query1 = "delete from account where username = '"+username+"'";
             String query2 = "delete from customer where username = '"+username+"'";
             String query3 = "delete from bookpackage where username = '"+username+"'";

@@ -115,7 +115,7 @@ public class ViewCustomer extends JFrame implements ActionListener {
         bg.add(image2);
 
         try{
-            Con c = new Con();
+            Conn c = new Conn();
             String query = "select * from customer where username = '"+username+"'";
             ResultSet rs = c.statement.executeQuery(query);
             while (rs.next()){

@@ -105,7 +105,7 @@ public class ViewPackage extends JFrame implements ActionListener {
         bg.add(image);
 
         try{
-            Con c = new Con();
+            Conn c = new Conn();
             String query = "select * from bookpackage where username = '"+username+"'";
             ResultSet rs = c.statement.executeQuery(query);
             while (rs.next()){

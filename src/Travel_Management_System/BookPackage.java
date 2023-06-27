@@ -136,7 +136,7 @@ public class BookPackage extends JFrame implements ActionListener {
         bg.add(image);
 
         try{
-            Con c = new Con();
+            Conn c = new Conn();
             String query = "select * from customer where username = '"+username+"'";
             ResultSet rs = c.statement.executeQuery(query);
             while (rs.next()){
@@ -169,7 +169,7 @@ public class BookPackage extends JFrame implements ActionListener {
         lableprice.setText("Rs "+cost);
         }else if(e.getSource()  == book){
             try{
-                Con c = new Con();
+                Conn c = new Conn();
                 final String s = "','" + lableidnumber.getText() + "',)";
                 String query = "insert into bookpackage values('"+lableusername.getText()+"','"+cpackage.getSelectedItem()+"','"+jtmember.getText()+"','"+lableid.getText()+"','"+lableidnumber.getText()+"','"+lablephone.getText()+"','"+lablemail.getText()+"','"+lableprice.getText()+"')";
                 c.statement.executeUpdate(query);

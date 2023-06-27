@@ -122,7 +122,7 @@ public class Signup extends JFrame implements ActionListener {
 
                 String query = "insert into account values('"+uname+"','"+name+"','"+pass+"','"+securityQ+"','"+answer+"')";
                 try{
-                    Con c = new Con();
+                    Conn c = new Conn();
                     c.statement.executeUpdate(query);  //DML command
 
                     JOptionPane.showMessageDialog(null,"Account Created Successfully");
