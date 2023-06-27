@@ -1,4 +1,5 @@
 # Travel_management
+In this project i use java Swing and java AWT . And for storing data i use mysql.
 
 The objective of the Travel and Tourism Management System project is to develop a system that automates the processes and activities of a travel and the purpose is to design a system using which one can perform all operations related to traveling
 This application will help in accessing the information related to the travel to the particular destination with great ease.
